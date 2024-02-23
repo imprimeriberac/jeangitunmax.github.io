@@ -1,0 +1,87 @@
+.hi {
+    margin: 50px 20px;
+    font-size: 5em;
+    text-align: center;
+}
+.text {
+    text-align: center;
+    font-size: 2em;
+    padding: 25px 15px;
+}
+* {
+    /* border: 1px solid red; */
+}
+.img-acceuil {
+    background: url("../img/page-acceuil.jpg") center;
+    background-size: cover;
+    width: 100%;
+}
+.w-50 {
+    width: 50%;
+    margin: 0 auto;
+}
+.test {
+    /* height: 150vh; */
+    border: 10px brown solid;
+    /* padding: 15px 25px 50px 100px; */
+    margin: 100px 50px 25px 15px;
+    background-color: rgb(48, 57, 57);
+}
+.background-color {
+    background-color: rgb(43, 255, 0);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    animation: animation  5s alternate infinite;
+}
+@keyframes animation {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.5);
+    }
+    
+}
+@keyframes animation2 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+
+    
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+nav ul li a {
+    display: block;
+   
+}
+nav ul li:hover a {
+   
+    animation: animation2  1s alternate infinite;
+}
+li {
+    list-style-type: none;
+}
