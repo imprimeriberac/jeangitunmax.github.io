@@ -1,15 +1,53 @@
-.hi {
-    margin: 50px 20px;
-    font-size: 5em;
+/* Le symbole étoile * permet de selectionner toutes les balises contenu dans la balise <body> dont la balise <body> elle même */
+
+* {
+    /* Ici on précise que toutes les balises ont un padding et une margin de 0 par defaut afin d'avoir des réglages au pixel perfect */
+    padding: 0;
+    margin: 0;
+    /*  Permet que la taille totale de l'élément reste constante, quelle que soit la taille des bordures et des padding/margin qui lui sont appliqués */
+    box-sizing: border-box;
+    /* Retire par défaut toutes les puces associé aux balises <li> */
+    list-style-type: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.h1 {
+    padding: 50px 20px;
+    font-size: 3em;
     text-align: center;
+}
+.h2 {
+    margin: 50px auto;
+    font-size: 2em;
+    text-align: center;
+    width: 80%;
+    
+}
+.list a {
+    display: block;
+    color: aliceblue;
+    text-decoration: none;
+}
+.list li {
+    margin-top: 5px;
+}
+.list ul li:hover a {
+    animation: animation3  1s alternate infinite;
+}
+header {
+    background: #45c52d;
+}
+.list h2 {
+    color: burlywood;
+    text-decoration: none;
+    padding: 0 0 0 25px;
+}
+.list ul {
+    padding: 25px 50px;
 }
 .text {
     text-align: center;
     font-size: 2em;
     padding: 25px 15px;
-}
-* {
-    /* border: 1px solid red; */
 }
 .img-acceuil {
     background: url("../img/page-acceuil.jpg") center;
@@ -20,12 +58,22 @@
     width: 50%;
     margin: 0 auto;
 }
+.w-80 {
+    width: 80%;
+    margin: 0 auto;
+}
+.margin-5 li {
+    margin: 25px 0;
+}
+.padding-b-5 {
+    padding-bottom: 50px;
+}
 .test {
     /* height: 150vh; */
     border: 10px brown solid;
     /* padding: 15px 25px 50px 100px; */
     margin: 100px 50px 25px 15px;
-    /* background-color: rgb(48, 57, 57); */
+    background-color: rgb(48, 57, 57);
 }
 .background-color {
     background-color: rgb(43, 255, 0);
@@ -48,13 +96,19 @@
 }
 @keyframes animation2 {
     0% {
-        transform: scale(0);
+        transform: scale(0.9);
     }
     100% {
-        transform: scale(1);
+        transform: scale(1.1);
+    } 
+}
+@keyframes animation3 {
+    0% {
+        transform: translateX(0px);
     }
-
-    
+    100% {
+        transform: translateX(15px);
+    } 
 }
 nav {
     display: flex;
@@ -68,18 +122,27 @@ nav ul {
     align-items: center;
     width: 100%;
 }
+nav ul:nth-child(1) {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+}
 nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 20px;
 }
 nav ul li a {
     display: block;
-   
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+/* :hover applique un effet à la balise ciblé qui se déclenche au survole de la souris */
 nav ul li:hover a {
-   
     animation: animation2  1s alternate infinite;
 }
 li {
